@@ -4,6 +4,7 @@ content = open("./gfw.conf")
 with open("./gfw.smartdns.conf", "w+") as c:
     c.truncate(0)
     for line in content:
-        c.write("nameserver /" + line.replace("/114.114.114.114", "/CN"))
+        c.write("nameserver /" + line.rstrip('\n') + "/GFW\n")
 
+content.close()
 exit()
