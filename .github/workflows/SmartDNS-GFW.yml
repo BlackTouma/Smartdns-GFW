@@ -21,7 +21,7 @@ jobs:
 
     - name: Download Rules
       run: |
-        cd smartdns_cn_rules
+        cd smartdns_gfw_rules
         wget "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt" -O gfw.conf
         python rules.py
 
